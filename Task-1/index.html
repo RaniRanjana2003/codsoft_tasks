@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rani Ranjana Portfolio</title>
+    
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #fcfcfc;
+            color: #232b2b;
+            line-height: 1.65;
+        }
+
+        /* PREMIUM DARK HERO SECTION CONTAINER */
+        .portfolio-hero-header {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 30px 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Header Top Level Navigation */
+        .global-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1a1a1a;
+            padding-bottom: 20px;
+        }
+
+        .global-navigation .portfolio-logo {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 0.75px;
+            color: #ffffff;
+        }
+
+        .nav-menu-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu-links li {
+            margin-left: 30px;
+        }
+
+        .nav-menu-links a {
+            color: #777777;
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: color 0.25s linear;
+        }
+
+        .nav-menu-links a:hover {
+            color: #ffffff;
+        }
+
+        /* Middle Core Workspace Layout */
+        .hero-flex-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-grow: 1;
+            gap: 50px;
+            margin-top: 20px;
+        }
+
+        .hero-intro-text {
+            flex: 1.2;
+        }
+
+        .hero-intro-text h1 {
+            font-size: 56px;
+            font-weight: 800;
+            letter-spacing: 2.5px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-intro-text p {
+            font-size: 16px;
+            color: #999999;
+            max-width: 480px;
+            margin-bottom: 40px;
+        }
+
+        .cta-connect-btn {
+            display: inline-block;
+            background-color: #0056b3;
+            color: #ffffff;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.2s linear;
+        }
+
+        .cta-connect-btn:hover {
+            background-color: #003d80;
+        }
+
+        .hero-avatar-display {
+            flex: 0.8;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hero-avatar-display img {
+            max-width: 90%;
+            border-radius: 4px;
+            filter: grayscale(15%) brightness(95%);
+        }
+
+        /* WHITE CLEAN CONTRAST SECTION (ABOUT/SKILLS) */
+        .biography-outer-block {
+            background-color: #ffffff;
+            padding: 110px 10%;
+        }
+
+        .biography-grid-layout {
+            display: flex;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .biography-frame {
+            flex: 1;
+        }
+
+        .biography-frame img {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.04);
+        }
+
+        .biography-content-panel {
+            flex: 1;
+        }
+
+        .biography-content-panel h2 {
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #111111;
+        }
+
+        .design-accent-bar {
+            width: 40px;
+            height: 3px;
+            background-color: #0056b3;
+            margin: 15px 0 25px 0;
+        }
+
+        .biography-content-panel p {
+            font-size: 15px;
+            color: #4a5568;
+            margin-bottom: 35px;
+        }
+
+        /* Uniquely Structured List Alignment */
+        .technical-competence-box {
+            margin-bottom: 40px;
+        }
+
+        .technical-competence-box h3 {
+            font-size: 15px;
+            color: #111111;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .custom-skills-grid {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .custom-skills-grid li {
+            font-size: 14px;
+            color: #2d3748;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .custom-skills-grid li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #0056b3;
+            font-size: 18px;
+            top: -3px;
+        }
+
+        /* Action Trigger Access Link */
+        .document-download-btn {
+            display: inline-block;
+            background-color: #111111;
+            color: #ffffff;
+            padding: 14px 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            border-radius: 2px;
+            transition: background-color 0.2s ease;
+        }
+
+        .document-download-btn:hover {
+            background-color: #2d3748;
+        }
+
+        /* MODERN RESEARCH GALLERY LAYOUT */
+        .project-showcase-grid {
+            padding: 90px 10%;
+            background-color: #f7fafc;
+            text-align: center;
+        }
+
+        .project-showcase-grid .design-accent-bar {
+            margin: 15px auto 45px auto;
+        }
+
+        .research-project-card {
+            background: #ffffff;
+            padding: 45px;
+            border-radius: 6px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            max-width: 750px;
+            margin: 0 auto;
+            text-align: left;
+            border-left: 5px solid #0056b3;
+        }
+
+        .project-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .research-project-card h3 {
+            color: #0d0d0d;
+            font-size: 22px;
+            line-height: 1.3;
+        }
+
+        .project-tag {
+            background-color: #ebf8ff;
+            color: #2b6cb0;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .project-description {
+            font-size: 14.5px;
+            color: #4a5568;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        /* Image Alignment styling inside card */
+        .project-image-container {
+            width: 100%;
+            margin-bottom: 25px;
+            border: 1px solid #edf2f7;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #f7fafc;
+        }
+
+        .project-screenshot {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-screenshot:hover {
+            transform: scale(1.01);
+        }
+
+        .project-tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-tech-stack span {
+            background-color: #edf2f7;
+            color: #4a5568;
+            font-size: 12px;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        /* DEEP BASE FOOTER TERMINAL */
+        .secure-footer-terminal {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            padding: 60px 10% 30px 10%;
+            text-align: center;
+        }
+
+        .communication-panel h2 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .communication-panel p {
+            font-size: 15px;
+            color: #888888;
+        }
+
+        .communication-panel a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .system-copyright-line {
+            margin-top: 45px;
+            border-top: 1px solid #1a1a1a;
+            padding-top: 25px;
+            font-size: 13px;
+            color: #444444;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="portfolio-hero-header">
+        <nav class="global-navigation">
+            <div class="portfolio-logo">Online Portfolio</div>
+            <ul class="nav-menu-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#biography">About Me</a></li>
+                <li><a href="#core-skills">Skills</a></li>
+                <li><a href="#engineering-works">Works</a></li>
+                <li><a href="#contact-portal">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+        <div class="hero-flex-container">
+            <div class="hero-intro-text">
+                <h1>RANI RANJANA</h1>
+                <p>An ambitious Information Technology Engineer specializing in advanced software development, intelligent automated systems, and algorithmic problem-solving.</p>
+                <a href="#contact-portal" class="cta-connect-btn">Hire Me</a>
+            </div>
+            <div class="hero-avatar-display">
+                <img src="Rani.png" alt="Rani Ranjana - IT Engineer">
+            </div>
+        </div>
+    </header>
+
+    <section id="biography" class="biography-outer-block">
+        <div class="biography-grid-layout">
+            <div class="biography-frame">
+            </div>
+            <div class="biography-content-panel">
+                <h2>ABOUT ME</h2>
+                <div class="design-accent-bar"></div>
+                <p>I am a dedicated Information Technology student focused on bridging the gap between complex data structures and intelligent computing. My research interests include natural language interfaces, machine learning workflows, and building robust full-stack systems that simplify human-computer interaction.</p>
+                
+                <div id="core-skills" class="technical-competence-box">
+                    <h3>Technical Expertise:</h3>
+                    <ul class="custom-skills-grid">
+                        <li>Python Architecture</li>
+                        <li>C++ Programming</li>
+                        <li>Data Structures & Algorithms (DSA)</li>
+                        <li>Semantic HTML5 & CSS3 Design</li>
+                    </ul>
+                </div>
+
+                <a href="https://drive.google.com/file/d/1MVR_cxvdrtDsCuBuOSHRN-9W9EFKyzY7/view?usp=drive_link" download class="document-download-btn">DOWNLOAD RESUME</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="engineering-works" class="project-showcase-grid">
+        <h2>MY PROJECTS</h2>
+        <div class="design-accent-bar"></div>
+        
+        <div class="research-project-card">
+            <div class="project-card-header">
+                <h3>Intelligent Virtual Assistant for INGRES Using AI Techniques</h3>
+                <span class="project-tag">Research & Development</span>
+            </div>
+            
+            <p class="project-description">Engineered a state-of-the-art Intelligent Virtual Assistant (IVA) designed to translate human conversational language into executable relational database syntax (Text-to-SQL queries). The system integrates advanced Natural Language Processing (NLP), NLU models, and Natural Language Generation (NLG) to allow non-technical users to seamlessly retrieve, manipulate, and interface with underlying INGRES database engines without writing raw SQL.</p>
+            
+            <img src="My project certificate.jpeg" alt="Rani Ranjana..." style="width: 100%; max-width: 500px; height: 320px; object-fit: cover; object-position: bottom;">
+            <div class="project-tech-stack">
+                <span>Python</span> <span>NLP/NLU</span> <span>INGRES DBMS</span> <span>Deep Learning</span>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact-portal" class="secure-footer-terminal">
+        <div class="communication-panel">
+            <h2>Contact Me</h2>
+            <p><strong>Email Address:</strong> <a href="mailto:raniranjan2003@gmail.com">raniranjan2003@gmail.com</a></p>
+            <p><strong>Phone Number:+918287772574</strong></p>
+        </div>
+        <div class="system-copyright-line">
+            <p>&copy; 2026 Rani Ranjana. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
