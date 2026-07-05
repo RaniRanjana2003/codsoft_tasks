@@ -1,0 +1,397 @@
+/* Reset Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222222;
+    color: #fff;
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo p {
+    font-size: 11px;
+    color: #aaa;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar nav ul li {
+    margin-left: 20px;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    color: #3b82f6;
+}
+
+/* Common Layout Components */
+section {
+    padding: 80px 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    position: relative;
+    color: #111;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #3b82f6;
+    margin: 8px auto 0 auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #fdfdfd;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-blue {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.btn-blue:hover {
+    background-color: #2563eb;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    height: 85vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    margin-top: 60px;
+}
+
+.hero-content {
+    color: white;
+    max-width: 600px;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #ddd;
+}
+
+/* ==========================================================================
+   About Me Section (Optimized for Laptop Medium Size Image)
+   ========================================================================== */
+.about-section {
+    background-color: #ffffff;
+}
+
+.section-container {
+    display: flex;
+    align-items: center;
+    gap: 60px; /* Space between image and text on laptop */
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centers the image container */
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 360px; /* Laptop standard medium width */
+    height: 450px;    /* Elegant standard portrait height */
+    object-fit: cover; /* Prevents image stretching */
+    border-radius: 8px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15); /* Soft professional shadow */
+}
+
+.about-content {
+    flex: 1.5;
+}
+
+.about-content h3 {
+    font-size: 24px;
+    color: #111;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.about-content h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #3b82f6;
+    margin-top: 5px;
+}
+
+.highlight-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+/* Services Section */
+.services-section {
+    background-color: #f9f9f9;
+}
+
+.services-section h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+/* Skills Section */
+.skills-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.skill-box {
+    margin-bottom: 20px;
+}
+
+.skill-box span {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.bar {
+    background: #eee;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    background: #3b82f6;
+    height: 100%;
+}
+
+/* Skill Percentages */
+.python { width: 85%; }
+.cpp { width: 80%; }
+.web { width: 90%; }
+.dsa { width: 70%; }
+
+/* Testimonials */
+.testimonial-section {
+    background-color: #f9f9f9;
+}
+
+.review-card p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.review-card h5 {
+    color: #3b82f6;
+    font-size: 14px;
+}
+
+/* Experience Section */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    border-left: 3px solid #3b82f6;
+    padding-left: 20px;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -27px;
+    top: 5px;
+    background: #3b82f6;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.duration {
+    font-size: 13px;
+    color: #3b82f6;
+    font-weight: bold;
+}
+
+/* Works Section */
+.project-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+}
+
+.project-card h4, .project-card p {
+    padding: 10px 20px;
+}
+
+.project-card p {
+    padding-top: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Blog Section */
+.blog-section {
+    background-color: #f9f9f9;
+}
+
+.blog-card h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.blog-card .date {
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.blog-card a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Contact Us Section */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   Responsive Design (Keeps it perfect on both mobile & laptop)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .navbar nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .navbar nav ul li {
+        margin: 5px 10px;
+    }
+    .section-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .about-image img {
+        max-width: 280px; /* Adjusts beautifully for smaller phone screens */
+        height: 350px;
+    }
+    .about-content h3::after {
+        margin: 5px auto 0 auto;
+    }
+}
